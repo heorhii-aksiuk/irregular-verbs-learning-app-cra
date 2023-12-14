@@ -1,0 +1,541 @@
+[
+  {
+    "id": 1,
+    "translation": "коштувати",
+    "infinitive": "cost",
+    "pastSimple": "cost",
+    "pastParticle": "cost"
+  },
+  {
+    "id": 2,
+    "translation": "різати",
+    "infinitive": "cut",
+    "pastSimple": "cut",
+    "pastParticle": "cut"
+  },
+  {
+    "id": 3,
+    "translation": "влучати",
+    "infinitive": "hit",
+    "pastSimple": "hit",
+    "pastParticle": "hit"
+  },
+  {
+    "id": 4,
+    "translation": "поранити",
+    "infinitive": "hurt",
+    "pastSimple": "hurt",
+    "pastParticle": "hurt"
+  },
+  {
+    "id": 5,
+    "translation": "дозволяти",
+    "infinitive": "let",
+    "pastSimple": "let",
+    "pastParticle": "let"
+  },
+  {
+    "id": 6,
+    "translation": "класти",
+    "infinitive": "put",
+    "pastSimple": "put",
+    "pastParticle": "put"
+  },
+  {
+    "id": 7,
+    "translation": "закрити",
+    "infinitive": "shut",
+    "pastSimple": "shut",
+    "pastParticle": "shut"
+  },
+  {
+    "id": 8,
+    "translation": "позичати",
+    "infinitive": "lend",
+    "pastSimple": "lent",
+    "pastParticle": "lent"
+  },
+  {
+    "id": 9,
+    "translation": "надсилати",
+    "infinitive": "send",
+    "pastSimple": "sent",
+    "pastParticle": "sent"
+  },
+  {
+    "id": 10,
+    "translation": "тратити",
+    "infinitive": "spend",
+    "pastSimple": "spent",
+    "pastParticle": "spent"
+  },
+  {
+    "id": 11,
+    "translation": "будувати",
+    "infinitive": "build",
+    "pastSimple": "built",
+    "pastParticle": "built"
+  },
+  {
+    "id": 12,
+    "translation": "горіти",
+    "infinitive": "burn",
+    "pastSimple": "burnt",
+    "pastParticle": "burnt"
+  },
+  {
+    "id": 13,
+    "translation": "вивчати",
+    "infinitive": "learn",
+    "pastSimple": "learnt",
+    "pastParticle": "learnt"
+  },
+  {
+    "id": 14,
+    "translation": "нюхати",
+    "infinitive": "smell",
+    "pastSimple": "smelt",
+    "pastParticle": "smelt"
+  },
+  {
+    "id": 15,
+    "translation": "тримати",
+    "infinitive": "keep",
+    "pastSimple": "kept",
+    "pastParticle": "kept"
+  },
+  {
+    "id": 16,
+    "translation": "спати",
+    "infinitive": "sleep",
+    "pastSimple": "slept",
+    "pastParticle": "slept"
+  },
+  {
+    "id": 17,
+    "translation": "відчувати",
+    "infinitive": "feel",
+    "pastSimple": "felt",
+    "pastParticle": "felt"
+  },
+  {
+    "id": 18,
+    "translation": "залишати",
+    "infinitive": "leave",
+    "pastSimple": "left",
+    "pastParticle": "left"
+  },
+  {
+    "id": 19,
+    "translation": "зустрічати",
+    "infinitive": "meet",
+    "pastSimple": "met",
+    "pastParticle": "met"
+  },
+  {
+    "id": 20,
+    "translation": "мріяти",
+    "infinitive": "dream",
+    "pastSimple": "dreamt",
+    "pastParticle": "dreamt"
+  },
+  {
+    "id": 21,
+    "translation": "значити",
+    "infinitive": "mean",
+    "pastSimple": "meant",
+    "pastParticle": "meant"
+  },
+  {
+    "id": 22,
+    "translation": "губити",
+    "infinitive": "lose",
+    "pastSimple": "lost",
+    "pastParticle": "lost"
+  },
+  {
+    "id": 23,
+    "translation": "стріляти",
+    "infinitive": "shoot",
+    "pastSimple": "shot",
+    "pastParticle": "shot"
+  },
+  {
+    "id": 24,
+    "translation": "отримувати",
+    "infinitive": "get",
+    "pastSimple": "got",
+    "pastParticle": "got"
+  },
+  {
+    "id": 25,
+    "translation": "освітлювати",
+    "infinitive": "light",
+    "pastSimple": "lit",
+    "pastParticle": "lit"
+  },
+  {
+    "id": 26,
+    "translation": "сидіти",
+    "infinitive": "sit",
+    "pastSimple": "sat",
+    "pastParticle": "sat"
+  },
+  {
+    "id": 27,
+    "translation": "приносити",
+    "infinitive": "bring",
+    "pastSimple": "brought",
+    "pastParticle": "brought"
+  },
+  {
+    "id": 28,
+    "translation": "купувати",
+    "infinitive": "buy",
+    "pastSimple": "bought",
+    "pastParticle": "bought"
+  },
+  {
+    "id": 29,
+    "translation": "битися",
+    "infinitive": "fight",
+    "pastSimple": "fought",
+    "pastParticle": "fought"
+  },
+  {
+    "id": 30,
+    "translation": "думати",
+    "infinitive": "think",
+    "pastSimple": "thought",
+    "pastParticle": "thought"
+  },
+  {
+    "id": 31,
+    "translation": "ловити",
+    "infinitive": "catch",
+    "pastSimple": "caught",
+    "pastParticle": "caught"
+  },
+  {
+    "id": 32,
+    "translation": "вчити (когось)",
+    "infinitive": "teach",
+    "pastSimple": "taught",
+    "pastParticle": "taught"
+  },
+  {
+    "id": 33,
+    "translation": "знаходити",
+    "infinitive": "find",
+    "pastSimple": "found",
+    "pastParticle": "found"
+  },
+  {
+    "id": 34,
+    "translation": "мати",
+    "infinitive": "have",
+    "pastSimple": "had",
+    "pastParticle": "had"
+  },
+  {
+    "id": 35,
+    "translation": "чути",
+    "infinitive": "hear",
+    "pastSimple": "heard",
+    "pastParticle": "heard"
+  },
+  {
+    "id": 36,
+    "translation": "утримувати",
+    "infinitive": "hold",
+    "pastSimple": "held",
+    "pastParticle": "held"
+  },
+  {
+    "id": 37,
+    "translation": "читати",
+    "infinitive": "read",
+    "pastSimple": "read",
+    "pastParticle": "read"
+  },
+  {
+    "id": 38,
+    "translation": "казати",
+    "infinitive": "say",
+    "pastSimple": "said",
+    "pastParticle": "said"
+  },
+  {
+    "id": 39,
+    "translation": "платити",
+    "infinitive": "pay",
+    "pastSimple": "paid",
+    "pastParticle": "paid"
+  },
+  {
+    "id": 40,
+    "translation": "створювати",
+    "infinitive": "make",
+    "pastSimple": "made",
+    "pastParticle": "made"
+  },
+  {
+    "id": 41,
+    "translation": "стояти",
+    "infinitive": "stand",
+    "pastSimple": "stood",
+    "pastParticle": "stood"
+  },
+  {
+    "id": 42,
+    "translation": "розуміти",
+    "infinitive": "understand",
+    "pastSimple": "understood",
+    "pastParticle": "understood"
+  },
+  {
+    "id": 43,
+    "translation": "продавати",
+    "infinitive": "sell",
+    "pastSimple": "sold",
+    "pastParticle": "sold"
+  },
+  {
+    "id": 44,
+    "translation": "розповідати",
+    "infinitive": "tell",
+    "pastSimple": "told",
+    "pastParticle": "told"
+  },
+  {
+    "id": 45,
+    "translation": "ламати",
+    "infinitive": "break",
+    "pastSimple": "broke",
+    "pastParticle": "broken"
+  },
+  {
+    "id": 46,
+    "translation": "вибирати",
+    "infinitive": "choose",
+    "pastSimple": "chose",
+    "pastParticle": "chosen"
+  },
+  {
+    "id": 47,
+    "translation": "говорити",
+    "infinitive": "speak",
+    "pastSimple": "spoke",
+    "pastParticle": "spoken"
+  },
+  {
+    "id": 48,
+    "translation": "красти",
+    "infinitive": "steal",
+    "pastSimple": "stole",
+    "pastParticle": "stolen"
+  },
+  {
+    "id": 49,
+    "translation": "прокидатися",
+    "infinitive": "wake",
+    "pastSimple": "woke",
+    "pastParticle": "woken"
+  },
+  {
+    "id": 50,
+    "translation": "кермувати",
+    "infinitive": "drive",
+    "pastSimple": "drove",
+    "pastParticle": "driven"
+  },
+  {
+    "id": 51,
+    "translation": "кататися (на)",
+    "infinitive": "ride",
+    "pastSimple": "rode",
+    "pastParticle": "ridden"
+  },
+  {
+    "id": 52,
+    "translation": "підійматися",
+    "infinitive": "rise",
+    "pastSimple": "rose",
+    "pastParticle": "risen"
+  },
+  {
+    "id": 53,
+    "translation": "писати",
+    "infinitive": "write",
+    "pastSimple": "wrote",
+    "pastParticle": "written"
+  },
+  {
+    "id": 54,
+    "translation": "бити",
+    "infinitive": "beat",
+    "pastSimple": "beat",
+    "pastParticle": "beaten"
+  },
+  {
+    "id": 55,
+    "translation": "кусати",
+    "infinitive": "bite",
+    "pastSimple": "bit",
+    "pastParticle": "bitten"
+  },
+  {
+    "id": 56,
+    "translation": "ховати",
+    "infinitive": "hide",
+    "pastSimple": "hid",
+    "pastParticle": "hidden"
+  },
+  {
+    "id": 57,
+    "translation": "їсти",
+    "infinitive": "eat",
+    "pastSimple": "ate",
+    "pastParticle": "eaten"
+  },
+  {
+    "id": 58,
+    "translation": "падати",
+    "infinitive": "fall",
+    "pastSimple": "fell",
+    "pastParticle": "fallen"
+  },
+  {
+    "id": 59,
+    "translation": "давати",
+    "infinitive": "give",
+    "pastSimple": "gave",
+    "pastParticle": "given"
+  },
+  {
+    "id": 60,
+    "translation": "бачити",
+    "infinitive": "see",
+    "pastSimple": "saw",
+    "pastParticle": "seen"
+  },
+  {
+    "id": 61,
+    "translation": "брати",
+    "infinitive": "take",
+    "pastSimple": "took",
+    "pastParticle": "taken"
+  },
+  {
+    "id": 62,
+    "translation": "дмухати",
+    "infinitive": "blow",
+    "pastSimple": "blew",
+    "pastParticle": "blown"
+  },
+  {
+    "id": 63,
+    "translation": "рости",
+    "infinitive": "grow",
+    "pastSimple": "grew",
+    "pastParticle": "grown"
+  },
+  {
+    "id": 64,
+    "translation": "знати",
+    "infinitive": "know",
+    "pastSimple": "knew",
+    "pastParticle": "known"
+  },
+  {
+    "id": 65,
+    "translation": "кидати",
+    "infinitive": "throw",
+    "pastSimple": "threw",
+    "pastParticle": "thrown"
+  },
+  {
+    "id": 66,
+    "translation": "малювати",
+    "infinitive": "draw",
+    "pastSimple": "drew",
+    "pastParticle": "drawn"
+  },
+  {
+    "id": 67,
+    "translation": "показувати",
+    "infinitive": "show",
+    "pastSimple": "showed",
+    "pastParticle": "shown"
+  },
+  {
+    "id": 68,
+    "translation": "починати",
+    "infinitive": "begin",
+    "pastSimple": "began",
+    "pastParticle": "begun"
+  },
+  {
+    "id": 69,
+    "translation": "пити",
+    "infinitive": "drink",
+    "pastSimple": "drank",
+    "pastParticle": "drunk"
+  },
+  {
+    "id": 70,
+    "translation": "плавати",
+    "infinitive": "swim",
+    "pastSimple": "swam",
+    "pastParticle": "swum"
+  },
+  {
+    "id": 71,
+    "translation": "дзвонити",
+    "infinitive": "ring",
+    "pastSimple": "rang",
+    "pastParticle": "rung"
+  },
+  {
+    "id": 72,
+    "translation": "бігти",
+    "infinitive": "run",
+    "pastSimple": "ran",
+    "pastParticle": "run"
+  },
+  {
+    "id": 73,
+    "translation": "співати",
+    "infinitive": "sing",
+    "pastSimple": "sang",
+    "pastParticle": "sung"
+  },
+  {
+    "id": 74,
+    "translation": "ставати",
+    "infinitive": "become",
+    "pastSimple": "became",
+    "pastParticle": "become"
+  },
+  {
+    "id": 75,
+    "translation": "приходити",
+    "infinitive": "come",
+    "pastSimple": "came",
+    "pastParticle": "come"
+  },
+  {
+    "id": 76,
+    "translation": "забувати",
+    "infinitive": "forget",
+    "pastSimple": "forgot",
+    "pastParticle": "forgotten"
+  },
+  {
+    "id": 77,
+    "translation": "літати",
+    "infinitive": "fly",
+    "pastSimple": "flew",
+    "pastParticle": "flown"
+  }
+]
