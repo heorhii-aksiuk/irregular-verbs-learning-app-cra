@@ -5,6 +5,18 @@ export interface Word {
   pastSimple: string;
   pastParticle: string;
 }
+export type WordsList = Word[];
+
+//
+
+export interface WrongAnswerWord extends Word {
+  infinitiveWrongAnswer: string;
+  pastSimpleWrongAnswer: string;
+  pastParticleWrongAnswer: string;
+}
+export type WrongAnswerWordsList = WrongAnswerWord[];
+
+//
 
 export type WrongAnswer = [
   wordId: number,
@@ -12,6 +24,9 @@ export type WrongAnswer = [
   correctValue: string,
   answer: string,
 ];
+export type WrongAnswersList = WrongAnswer[];
+
+// ****** Enums *****
 
 export enum WordFrom {
   infinitive = 'infinitive',

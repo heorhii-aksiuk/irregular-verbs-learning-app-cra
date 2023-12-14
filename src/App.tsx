@@ -2,17 +2,19 @@ import { useState } from 'react';
 import WordInput from './components/WordInput';
 import words from './utils/getShuffleData';
 import WordTranslation from './components/WordTranslation';
-import { WordFrom, WrongAnswer } from './types';
+import { WordFrom, WrongAnswer, WrongAnswersList } from './types';
 
 export default function App() {
   const [submitted, setSubmitted] = useState(false);
-  const [wrongAnswers, setWrongAnswers] = useState<WrongAnswer[]>([]);
+  const [wrongAnswersList, setWrongAnswersList] = useState<WrongAnswersList>(
+    [],
+  );
 
   const getWrongAnswers = (wrongAnswer: WrongAnswer) => {
-    setWrongAnswers((prev: WrongAnswer[]) => [...prev, wrongAnswer]);
+    setWrongAnswersList((prev: WrongAnswersList) => [...prev, wrongAnswer]);
   };
 
-  console.log(wrongAnswers);
+  console.log(wrongAnswersList);
 
   const onSubmit = (event: any) => {
     event.preventDefault();
@@ -57,9 +59,9 @@ export default function App() {
           Check
         </button>
 
-        {wrongAnswers.length > 0 && (
+        {wrongAnswersList.length > 0 && (
           <ol>
-            {wrongAnswers.map((word: WrongAnswer, index: number) => (
+            {wrongAnswersList.map((word: WrongAnswer, index: number) => (
               <li key={index}>{word}</li>
             ))}
           </ol>
