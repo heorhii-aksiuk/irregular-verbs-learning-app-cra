@@ -20,7 +20,8 @@ export default function App() {
     [],
   );
 
-  const [resultWrongAnswersList, setResultWrongAnswersList] = useState<any>([]);
+  const [resultWrongAnswersList, setResultWrongAnswersList] =
+    useState<WrongAnswerWordsList>([]);
 
   const getWrongAnswers = (wrongAnswer: WrongAnswer) => {
     setWrongAnswersList((prev: WrongAnswersList) => [...prev, wrongAnswer]);
@@ -82,8 +83,13 @@ export default function App() {
 
           {resultWrongAnswersList.length > 0 && (
             <ol>
-              {resultWrongAnswersList.map((word: any, index: number) => (
-                <li key={index}>{word.wordId}</li>
+              {resultWrongAnswersList.map((word, index: number) => (
+                <li key={index}>
+                  {word.translation} {word.infinitiveWrongAnswer}{' '}
+                  {word.infinitive} {word.pastSimpleWrongAnswer}{' '}
+                  {word.pastSimple} {word.pastParticleWrongAnswer}{' '}
+                  {word.pastParticle}
+                </li>
               ))}
             </ol>
           )}

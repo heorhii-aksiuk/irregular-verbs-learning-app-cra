@@ -8,9 +8,9 @@ export interface Word {
 export type WordsList = Word[];
 
 export interface WrongAnswerWord extends Word {
-  infinitiveWrongAnswer: string;
-  pastSimpleWrongAnswer: string;
-  pastParticleWrongAnswer: string;
+  infinitiveWrongAnswer?: string;
+  pastSimpleWrongAnswer?: string;
+  pastParticleWrongAnswer?: string;
 }
 export type WrongAnswerWordsList = WrongAnswerWord[];
 
