@@ -16,12 +16,12 @@ export type WrongAnswerWordsList = WrongAnswerWord[];
 
 //
 
-export type WrongAnswer = [
-  wordId: number,
-  wordForm: WordFrom,
-  correctValue: string,
-  answer: string,
-];
+export interface WrongAnswer {
+  wordId: number;
+  wordForm: WordFrom;
+  correctValue: string;
+  value: string;
+}
 export type WrongAnswersList = WrongAnswer[];
 
 //

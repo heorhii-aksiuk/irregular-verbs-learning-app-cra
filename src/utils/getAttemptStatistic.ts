@@ -1,4 +1,4 @@
-import words from '../data.json';
+/* import words from '../data.json';
 import {
   getScore,
   getFormattedDate,
@@ -8,7 +8,7 @@ import {
 import { wordFormsCount } from '../constants';
 import { AttemptStatistic, WrongAnswersList } from '../types';
 
-export default function (
+export default function getAttemptStatistic(
   wrongAnswersList: WrongAnswersList,
   attemptStartTime: number,
   attemptFinishTime: number,
@@ -40,4 +40,9 @@ export default function (
     totalScore,
     resultWrongAnswersList,
   };
+}
+ */
+
+export default function getAttemptStatistic() {
+  return 0;
 }

@@ -1,8 +1,15 @@
-import { WordsList, WrongAnswerWordsList, WrongAnswersList } from '../types';
+import {
+  WordsList,
+  WrongAnswer,
+  WrongAnswerWordsList,
+  WrongAnswersList,
+} from '../types';
 
 export default function getResultWrongAnswersList(
   words: WordsList,
   wrongAnswersList: WrongAnswersList,
-): WrongAnswerWordsList {
-  return [];
+) {
+  console.log(words);
+  console.log(wrongAnswersList);
+  return wrongAnswersList;
 }

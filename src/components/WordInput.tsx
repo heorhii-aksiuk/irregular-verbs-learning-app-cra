@@ -28,7 +28,7 @@ export default function WordInput({
       setStyle({ backgroundColor: 'green' });
     } else {
       setStyle({ backgroundColor: 'red' });
-      getWrongAnswers([wordId, wordForm, correctValue, value]);
+      getWrongAnswers({ wordId, wordForm, correctValue, value });
       setValue((prev) => `${prev}>${correctValue}`);
     }
   }, [submitted]);
