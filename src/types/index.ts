@@ -7,8 +7,6 @@ export interface Word {
 }
 export type WordsList = Word[];
 
-//
-
 export interface WrongAnswerWord extends Word {
   infinitiveWrongAnswer: string;
   pastSimpleWrongAnswer: string;
@@ -25,6 +23,20 @@ export type WrongAnswer = [
   answer: string,
 ];
 export type WrongAnswersList = WrongAnswer[];
+
+//
+
+export interface AttemptStatistic {
+  date: string;
+  time: string;
+  wordsToLearnCount: number;
+  totalWordsToLearnCount: number;
+  wrongAnswersWordsCount: number;
+  score: number;
+  totalWrongAnswersWordsCount: number;
+  totalScore: number;
+  resultWrongAnswersList: WrongAnswerWordsList;
+}
 
 // ****** Enums *****
 

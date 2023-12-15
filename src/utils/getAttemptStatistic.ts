@@ -1,48 +1,41 @@
-// import { Word } from '../types';
-import { WrongAnswerWordsList, WrongAnswersList } from '../types';
 import words from './getShuffleData';
-
-export interface AttemptStatistic {
-  date: Date;
-  time: Date;
-  wordsToLearnCount: number;
-  totalWordsToLearnCount: number;
-  wrongAnswersWordsCount: number;
-  score: number;
-  totalWrongAnswersWordsCount: number;
-  totalScore: number;
-  resultWrongAnswersList: WrongAnswerWordsList;
-}
-
-// const timestamp = Date.now();
-export function getFormattedDate(timestamp: number): string {
-  const date = new Date(timestamp);
-
-  const day = String(date.getDate()).padStart(2, '0');
-  const month = String(date.getMonth() + 1).padStart(2, '0');
-  const year = date.getFullYear();
-
-  const hours = String(date.getHours()).padStart(2, '0');
-  const minutes = String(date.getMinutes()).padStart(2, '0');
-  const seconds = String(date.getSeconds()).padStart(2, '0');
-
-  const formattedDateTime = `${day}.${month}.${year} ${hours}:${minutes}:${seconds}`;
-
-  return formattedDateTime;
-}
-
-export function getAttemptStartTime() {
-  return;
-}
-
-export function getAttemptFinishTime() {
-  return;
-}
+import { getTime } from './getTime';
+import { getFormattedDate } from './getFormattedDate';
+import { wordForms } from '../constants';
+import { AttemptStatistic, WrongAnswersList } from '../types';
+import { getScore } from './getScore';
+import { getResultWrongAnswersList } from './getResultWrongAnswersList';
 
 export default function getAttemptStatistic(
   wrongAnswersList: WrongAnswersList,
-  attemptStartTime: Date,
-  attemptFinishTime: Date,
-) {
-  return;
+  attemptStartTime: number,
+  attemptFinishTime: number,
+): AttemptStatistic {
+  const date = getFormattedDate(attemptFinishTime);
+  const time = getTime(attemptStartTime, attemptFinishTime);
+  const wordsToLearnCount = words.length;
+  const totalWordsToLearnCount = wordsToLearnCount * wordForms;
+  const totalWrongAnswersWordsCount = wrongAnswersList.length;
+  const totalScore = getScore(
+    totalWordsToLearnCount,
+    totalWrongAnswersWordsCount,
+  );
+  const resultWrongAnswersList = getResultWrongAnswersList(
+    words,
+    wrongAnswersList,
+  ); //not ready
+  const wrongAnswersWordsCount = resultWrongAnswersList.length;
+  const score = getScore(wordsToLearnCount, wrongAnswersWordsCount);
+
+  return {
+    date,
+    time,
+    wordsToLearnCount,
+    totalWordsToLearnCount,
+    wrongAnswersWordsCount,
+    score,
+    totalWrongAnswersWordsCount,
+    totalScore,
+    resultWrongAnswersList,
+  };
 }
