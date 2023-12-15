@@ -1,24 +1,24 @@
-export interface Word {
+export interface Verb {
   id: number;
   translation: string;
   infinitive: string;
   pastSimple: string;
   pastParticle: string;
 }
-export type WordsList = Word[];
+export type VerbsList = Verb[];
 
-export interface WrongAnswerWord extends Word {
-  infinitiveWrongAnswer?: string;
-  pastSimpleWrongAnswer?: string;
-  pastParticleWrongAnswer?: string;
+interface VerbWithWrongAnswer extends Verb {
+  infinitiveWrong?: string;
+  pastSimpleWrong?: string;
+  pastParticleWrong?: string;
 }
-export type WrongAnswerWordsList = WrongAnswerWord[];
+export type VerbsWithWrongAnswersList = VerbWithWrongAnswer[];
 
 //
 
 export interface WrongAnswer {
-  wordId: number;
-  wordForm: WordFrom;
+  id: number;
+  verbForm: VerbForm;
   correctValue: string;
   value: string;
 }
@@ -29,18 +29,18 @@ export type WrongAnswersList = WrongAnswer[];
 export interface AttemptStatistic {
   date: string;
   time: string;
+  verbsToLearnCount: number;
   wordsToLearnCount: number;
-  totalWordsToLearnCount: number;
+  wrongAnswersVerbsCount: number;
+  verbsScore: number;
   wrongAnswersWordsCount: number;
-  score: number;
-  totalWrongAnswersWordsCount: number;
-  totalScore: number;
-  resultWrongAnswersList: WrongAnswerWordsList;
+  wordsScore: number;
+  resultWrongAnswersList: VerbsWithWrongAnswersList;
 }
 
 // ****** Enums *****
 
-export enum WordFrom {
+export enum VerbForm {
   infinitive = 'infinitive',
   pastSimple = 'pastSimple',
   pastParticle = 'pastParticle',

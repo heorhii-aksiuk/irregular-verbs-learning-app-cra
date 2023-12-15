@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
-import { WordFrom, WrongAnswer } from '../types';
+import { VerbForm, WrongAnswer } from '../types';
 
 interface Props {
   wordId: number;
   correctValue: string;
   submitted: boolean;
   getWrongAnswers: (wrongAnswer: WrongAnswer) => void;
-  wordForm: WordFrom;
+  verbForm: VerbForm;
 }
 
 export default function WordInput({
@@ -14,7 +14,7 @@ export default function WordInput({
   correctValue,
   submitted,
   getWrongAnswers,
-  wordForm,
+  verbForm,
 }: Props) {
   const [value, setValue] = useState('');
   const [style, setStyle] = useState({});
@@ -28,7 +28,7 @@ export default function WordInput({
       setStyle({ backgroundColor: 'green' });
     } else {
       setStyle({ backgroundColor: 'red' });
-      getWrongAnswers({ wordId, wordForm, correctValue, value });
+      getWrongAnswers({ id: wordId, verbForm, correctValue, value });
       setValue((prev) => `${prev}>${correctValue}`);
     }
   }, [submitted]);

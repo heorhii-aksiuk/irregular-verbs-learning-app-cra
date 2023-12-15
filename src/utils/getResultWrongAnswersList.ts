@@ -1,22 +1,16 @@
-import {
-  WordsList,
-  WrongAnswer,
-  WrongAnswerWordsList,
-  WrongAnswersList,
-} from '../types';
+import { VerbsList, WrongAnswersList } from '../types';
 
 export default function getResultWrongAnswersList(
-  words: WordsList,
+  words: VerbsList,
   wrongAnswersList: WrongAnswersList,
 ) {
-  console.log(words);
-  console.log(wrongAnswersList);
-
   const result: any = [];
 
   wrongAnswersList.forEach((wrongAnswer) => {
-    const wrongAnswerId = wrongAnswer.wordId;
-    const objField = `${wrongAnswer.wordForm}WrongAnswer`;
+    const wrongAnswerId = wrongAnswer.id;
+
+    const wrongFormKey = `${wrongAnswer.verbForm}Wrong`;
+    //Magic
 
     const wordInResult = result.findIndex(
       (word: any) => word.id === wrongAnswerId,
@@ -26,16 +20,15 @@ export default function getResultWrongAnswersList(
     );
 
     if (wordInResult === -1) {
-      result.push({ ...words[wordNotInResult], [objField]: wrongAnswer.value });
+      result.push({
+        ...words[wordNotInResult],
+        [wrongFormKey]: wrongAnswer.value,
+      });
     } else {
       const obj = result[wordInResult];
-      obj[objField] = wrongAnswer.value;
+      obj[wrongFormKey] = wrongAnswer.value;
     }
-
-    // result.push()
   });
-
-  console.log(result);
 
   return result;
 }

@@ -1,4 +1,3 @@
-/* import words from '../data.json';
 import {
   getScore,
   getFormattedDate,
@@ -6,43 +5,36 @@ import {
   getTime,
 } from '.';
 import { wordFormsCount } from '../constants';
-import { AttemptStatistic, WrongAnswersList } from '../types';
+import { AttemptStatistic, VerbsList, WrongAnswersList } from '../types';
 
 export default function getAttemptStatistic(
+  verbs: VerbsList,
   wrongAnswersList: WrongAnswersList,
   attemptStartTime: number,
   attemptFinishTime: number,
 ): AttemptStatistic {
   const date = getFormattedDate(attemptFinishTime);
   const time = getTime(attemptStartTime, attemptFinishTime);
-  const wordsToLearnCount = words.length;
-  const totalWordsToLearnCount = wordsToLearnCount * wordFormsCount;
-  const totalWrongAnswersWordsCount = wrongAnswersList.length;
-  const totalScore = getScore(
-    totalWordsToLearnCount,
-    totalWrongAnswersWordsCount,
-  );
+  const verbsToLearnCount = verbs.length;
+  const wordsToLearnCount = verbsToLearnCount * wordFormsCount;
+  const wrongAnswersWordsCount = wrongAnswersList.length;
+  const wordsScore = getScore(wordsToLearnCount, wrongAnswersWordsCount);
   const resultWrongAnswersList = getResultWrongAnswersList(
-    words,
+    verbs,
     wrongAnswersList,
-  ); //not ready
-  const wrongAnswersWordsCount = resultWrongAnswersList.length;
-  const score = getScore(wordsToLearnCount, wrongAnswersWordsCount);
+  );
+  const wrongAnswersVerbsCount = resultWrongAnswersList.length;
+  const verbsScore = getScore(verbsToLearnCount, wrongAnswersVerbsCount);
 
   return {
     date,
     time,
+    verbsToLearnCount,
     wordsToLearnCount,
-    totalWordsToLearnCount,
+    wrongAnswersVerbsCount,
+    verbsScore,
     wrongAnswersWordsCount,
-    score,
-    totalWrongAnswersWordsCount,
-    totalScore,
+    wordsScore,
     resultWrongAnswersList,
   };
-}
- */
-
-export default function getAttemptStatistic() {
-  return 0;
 }
