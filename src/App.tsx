@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import WordInput from './components/WordInput';
-import words from './utils/getShuffleData';
+import { shuffledWordsList } from './utils';
 import WordTranslation from './components/WordTranslation';
 import { WordFrom, WrongAnswer, WrongAnswersList } from './types';
 
@@ -26,7 +26,7 @@ export default function App() {
       <header>Irregular verbs learning app</header>
       <form spellCheck={false}>
         <ol>
-          {words.map((word) => (
+          {shuffledWordsList.map((word) => (
             <li key={word.id}>
               <div>
                 <WordTranslation value={word.translation} />

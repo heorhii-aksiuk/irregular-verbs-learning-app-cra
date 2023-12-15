@@ -1,5 +1,5 @@
 // const timestamp = Date.now();
-export function getFormattedDate(timestamp: number): string {
+export default function getFormattedDate(timestamp: number): string {
   const date = new Date(timestamp);
 
   const day = String(date.getDate()).padStart(2, '0');

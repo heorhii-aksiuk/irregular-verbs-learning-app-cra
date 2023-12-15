@@ -1,6 +1,6 @@
 import { WordsList, WrongAnswerWordsList, WrongAnswersList } from '../types';
 
-export function getResultWrongAnswersList(
+export default function getResultWrongAnswersList(
   words: WordsList,
   wrongAnswersList: WrongAnswersList,
 ): WrongAnswerWordsList {

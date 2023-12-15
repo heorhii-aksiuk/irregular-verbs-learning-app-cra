@@ -1,12 +1,14 @@
-import words from './getShuffleData';
-import { getTime } from './getTime';
-import { getFormattedDate } from './getFormattedDate';
-import { wordForms } from '../constants';
+import words from '../data.json';
+import {
+  getScore,
+  getFormattedDate,
+  getResultWrongAnswersList,
+  getTime,
+} from '.';
+import { wordFormsCount } from '../constants';
 import { AttemptStatistic, WrongAnswersList } from '../types';
-import { getScore } from './getScore';
-import { getResultWrongAnswersList } from './getResultWrongAnswersList';
 
-export default function getAttemptStatistic(
+export default function (
   wrongAnswersList: WrongAnswersList,
   attemptStartTime: number,
   attemptFinishTime: number,
@@ -14,7 +16,7 @@ export default function getAttemptStatistic(
   const date = getFormattedDate(attemptFinishTime);
   const time = getTime(attemptStartTime, attemptFinishTime);
   const wordsToLearnCount = words.length;
-  const totalWordsToLearnCount = wordsToLearnCount * wordForms;
+  const totalWordsToLearnCount = wordsToLearnCount * wordFormsCount;
   const totalWrongAnswersWordsCount = wrongAnswersList.length;
   const totalScore = getScore(
     totalWordsToLearnCount,

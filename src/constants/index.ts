@@ -1,1 +1,1 @@
-export const wordForms = 3;
+export const wordFormsCount = 3;
