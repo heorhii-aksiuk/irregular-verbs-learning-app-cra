@@ -1,6 +1,6 @@
 import { VerbsList, WrongAnswersList } from '../types';
 
-export default function getResultWrongAnswersList(
+export function getResultWrongAnswersList(
   words: VerbsList,
   wrongAnswersList: WrongAnswersList,
 ) {

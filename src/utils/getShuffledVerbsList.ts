@@ -1,6 +1,6 @@
 import { VerbsList } from '../types';
 
-export default function getShuffledWordsList(array: VerbsList): VerbsList {
+export function getShuffledVerbsList(array: VerbsList): VerbsList {
   const resultArray: VerbsList = [];
   do {
     const randomIndex = Math.floor(Math.random() * array.length);

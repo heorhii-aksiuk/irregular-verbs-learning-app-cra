@@ -1,27 +1,44 @@
 import { useEffect, useState } from 'react';
-import WordInput from './components/WordInput';
-import { getAttemptStatistic, shuffledWordsList } from './utils';
-import WordTranslation from './components/WordTranslation';
-import { VerbForm, WrongAnswer, WrongAnswersList } from './types';
+import { getAttemptStatistic, shuffledVerbsList } from './utils';
+import { Statistic, WrongAnswer, WrongAnswersList } from './types';
+import VerbsBoard from './components/VerbsBoard';
+import AppBar from './components/AppBar';
+import AttemptStatistic from './components/AttemptStatistic';
 
 export default function App() {
   const [submitted, setSubmitted] = useState(false);
+  const [attemptStatistic, setAttemptStatistic] = useState<Statistic | null>(
+    null,
+  );
+  const [startTime, setStartTime] = useState<number | null>(null);
+  const [finishTime, setFinishTime] = useState<number | null>(null);
   const [wrongAnswersList, setWrongAnswersList] = useState<WrongAnswersList>(
     [],
   );
-  const [attemptStatistic, setAttemptStatistic] = useState({});
+
+  const getStartTime = () => {
+    if (startTime !== null) {
+      return;
+    }
+    setStartTime(Date.now());
+  };
 
   const getWrongAnswers = (wrongAnswer: WrongAnswer) => {
     setWrongAnswersList((prev: WrongAnswersList) => [...prev, wrongAnswer]);
   };
 
   useEffect(() => {
-    if (submitted && wrongAnswersList.length > 0) {
+    if (
+      submitted &&
+      startTime !== null &&
+      finishTime !== null &&
+      wrongAnswersList.length > 0
+    ) {
       const statistic = getAttemptStatistic(
-        shuffledWordsList,
+        shuffledVerbsList,
         wrongAnswersList,
-        Date.now(),
-        Date.now() + 1000,
+        startTime,
+        finishTime,
       );
       setAttemptStatistic(statistic);
     }
@@ -29,6 +46,7 @@ export default function App() {
 
   const onSubmit = (event: any) => {
     event.preventDefault();
+    setFinishTime(Date.now());
     setSubmitted(true);
   };
 
@@ -36,55 +54,24 @@ export default function App() {
 
   return (
     <>
-      <header>Irregular verbs learning app</header>
+      <AppBar />
       <div style={{ display: 'flex' }}>
-        <form style={{ margin: '0 auto' }} spellCheck={false}>
-          <ol>
-            {shuffledWordsList.map((word) => (
-              <li key={word.id}>
-                <div>
-                  <WordTranslation value={word.translation} />
-                  <WordInput
-                    wordId={word.id}
-                    correctValue={word.infinitive}
-                    submitted={submitted}
-                    getWrongAnswers={getWrongAnswers}
-                    verbForm={VerbForm.infinitive}
-                  />
-                  <WordInput
-                    wordId={word.id}
-                    correctValue={word.pastSimple}
-                    submitted={submitted}
-                    getWrongAnswers={getWrongAnswers}
-                    verbForm={VerbForm.pastSimple}
-                  />
-                  <WordInput
-                    wordId={word.id}
-                    correctValue={word.pastParticle}
-                    submitted={submitted}
-                    getWrongAnswers={getWrongAnswers}
-                    verbForm={VerbForm.pastParticle}
-                  />
-                </div>
-              </li>
-            ))}
-          </ol>
+        <form
+          onKeyDown={getStartTime}
+          style={{ margin: '0 auto' }}
+          spellCheck={false}
+        >
+          <VerbsBoard
+            verbs={shuffledVerbsList}
+            getWrongAnswers={getWrongAnswers}
+            submitted={submitted}
+          />
           <button onClick={onSubmit} type="button">
             Check
           </button>
-
-          {/* {resultWrongAnswersList.length > 0 && (
-            <ol>
-              {resultWrongAnswersList.map((word, index: number) => (
-                <li key={index}>
-                  {word.translation} {word.infinitiveWrongAnswer}{' '}
-                  {word.infinitive} {word.pastSimpleWrongAnswer}{' '}
-                  {word.pastSimple} {word.pastParticleWrongAnswer}{' '}
-                  {word.pastParticle}
-                </li>
-              ))}
-            </ol>
-          )} */}
+          {attemptStatistic && (
+            <AttemptStatistic statistic={attemptStatistic} />
+          )}
         </form>
       </div>
     </>

@@ -1,6 +1,6 @@
 import { millisecondsToTime } from '.';
 
-export default function getTime(
+export function getTime(
   attemptStartTime: number,
   attemptFinishTime: number,
 ): string {

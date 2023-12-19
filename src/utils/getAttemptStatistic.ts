@@ -5,14 +5,14 @@ import {
   getTime,
 } from '.';
 import { wordFormsCount } from '../constants';
-import { AttemptStatistic, VerbsList, WrongAnswersList } from '../types';
+import { Statistic, VerbsList, WrongAnswersList } from '../types';
 
-export default function getAttemptStatistic(
+export function getAttemptStatistic(
   verbs: VerbsList,
   wrongAnswersList: WrongAnswersList,
   attemptStartTime: number,
   attemptFinishTime: number,
-): AttemptStatistic {
+): Statistic {
   const date = getFormattedDate(attemptFinishTime);
   const time = getTime(attemptStartTime, attemptFinishTime);
   const verbsToLearnCount = verbs.length;

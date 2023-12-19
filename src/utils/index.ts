@@ -1,19 +1,8 @@
-import getAttemptStatistic from './getAttemptStatistic';
-import getFormattedDate from './getFormattedDate';
-import getResultWrongAnswersList from './getResultWrongAnswersList';
-import getScore from './getScore';
-import getShuffledWordsList from './getShuffledWordsList';
-import getTime from './getTime';
-import millisecondsToTime from './millisecondsToTime';
-import shuffledWordsList from './shuffledWordsList';
-
-export {
-  getAttemptStatistic,
-  getFormattedDate,
-  getResultWrongAnswersList,
-  getScore,
-  getShuffledWordsList,
-  getTime,
-  millisecondsToTime,
-  shuffledWordsList,
-};
+export * from './getAttemptStatistic';
+export * from './getFormattedDate';
+export * from './getResultWrongAnswersList';
+export * from './getScore';
+export * from './getShuffledVerbsList';
+export * from './getTime';
+export * from './millisecondsToTime';
+export * from './shuffledVerbsList';
