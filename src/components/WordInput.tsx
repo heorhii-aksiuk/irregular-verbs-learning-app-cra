@@ -1,35 +1,18 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { VerbForm, WrongAnswer } from '../types';
 
 interface Props {
   verbId: number;
+  verbForm: VerbForm;
   correctValue: string;
   submitted: boolean;
   getWrongAnswers: (wrongAnswer: WrongAnswer) => void;
-  verbForm: VerbForm;
-  getStartTime?: () => void;
 }
 
-export default function WordInput({
-  verbId,
-  correctValue,
-  submitted,
-  getWrongAnswers,
-  verbForm,
-  getStartTime,
-}: Props) {
+export default function WordInput(props: Props) {
+  const { verbId, correctValue, submitted, getWrongAnswers, verbForm } = props;
   const [value, setValue] = useState('');
   const [style, setStyle] = useState({});
-  const ref = useRef<any>(null);
-
-  useEffect(() => {
-    if (value.length > 0) {
-      if (ref.current === null) {
-        getStartTime && getStartTime();
-        ref.current = '';
-      }
-    }
-  }, [value]);
 
   useEffect(() => {
     if (submitted !== true) {

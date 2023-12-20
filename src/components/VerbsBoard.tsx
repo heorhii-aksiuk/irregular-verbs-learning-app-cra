@@ -7,11 +7,8 @@ interface Props {
   getWrongAnswers: (wrongAnswer: WrongAnswer) => void;
 }
 
-export default function VerbsBoard({
-  verbs,
-  submitted,
-  getWrongAnswers,
-}: Props) {
+export default function VerbsBoard(props: Props) {
+  const { verbs, submitted, getWrongAnswers } = props;
   return (
     <ol>
       {verbs.map((verb) => (

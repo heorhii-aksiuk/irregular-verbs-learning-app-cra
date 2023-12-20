@@ -1,4 +1,3 @@
-// const timestamp = Date.now();
 export function getFormattedDate(timestamp: number): string {
   const date = new Date(timestamp);
 

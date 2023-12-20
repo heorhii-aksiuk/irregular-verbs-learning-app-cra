@@ -26,7 +26,7 @@ export type WrongAnswersList = WrongAnswer[];
 
 //
 
-export interface Statistic {
+export interface Stat {
   date: string;
   time: string;
   verbsToLearnCount: number;

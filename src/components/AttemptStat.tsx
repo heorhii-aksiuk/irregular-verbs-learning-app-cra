@@ -1,11 +1,11 @@
 import React from 'react';
-import { Statistic } from '../types';
+import { Stat } from '../types';
 
 interface Props {
-  statistic: Statistic;
+  statistic: Stat;
 }
 
-export default function AttemptStatistic({ statistic }: Props) {
+export default function AttemptStat({ statistic }: Props) {
   return (
     <div>
       <p>Date: {statistic.date}</p>

@@ -1,4 +1,4 @@
-export * from './getAttemptStatistic';
+export * from './getAttemptStat';
 export * from './getFormattedDate';
 export * from './getResultWrongAnswersList';
 export * from './getScore';
