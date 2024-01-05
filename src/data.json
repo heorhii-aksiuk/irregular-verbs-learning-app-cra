@@ -537,5 +537,54 @@
     "infinitive": "fly",
     "pastSimple": "flew",
     "pastParticle": "flown"
+  },
+  {
+    "id": 78,
+    "translation": "бути",
+    "infinitive": "be",
+    "pastSimple": "were",
+    "pastParticle": "been"
+  },
+  {
+    "id": 79,
+    "translation": "робити",
+    "infinitive": "do",
+    "pastSimple": "did",
+    "pastParticle": "done"
+  },
+  {
+    "id": 80,
+    "translation": "прощати",
+    "infinitive": "forgive",
+    "pastSimple": "forgave",
+    "pastParticle": "forgiven"
+  },
+  {
+    "id": 81,
+    "translation": "йти",
+    "infinitive": "go",
+    "pastSimple": "went",
+    "pastParticle": "gone"
+  },
+  {
+    "id": 82,
+    "translation": "помилятися",
+    "infinitive": "mistake",
+    "pastSimple": "mistook",
+    "pastParticle": "mistaken"
+  },
+  {
+    "id": 83,
+    "translation": "носити (одяг)",
+    "infinitive": "wear",
+    "pastSimple": "wore",
+    "pastParticle": "worn"
+  },
+  {
+    "id": 84,
+    "translation": "вигравати",
+    "infinitive": "win",
+    "pastSimple": "won",
+    "pastParticle": "won"
   }
 ]
