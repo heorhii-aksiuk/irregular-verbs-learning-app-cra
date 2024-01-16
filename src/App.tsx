@@ -4,6 +4,7 @@ import { Stat, WrongAnswer, WrongAnswersList } from './types';
 import AppBar from './components/AppBar';
 import VerbsBoard from './components/VerbsBoard';
 import AttemptStat from './components/AttemptStat';
+import { useLocalStorageState } from './utils/hooks';
 
 export default function App() {
   const [submitted, setSubmitted] = useState(false);
@@ -11,6 +12,13 @@ export default function App() {
   const [finishTime, setFinishTime] = useState<number | null>(null);
   const [attemptStat, setAttemptStat] = useState<Stat | null>(null);
   const [wrongAnswers, setWrongAnswers] = useState<WrongAnswersList>([]);
+  const [savedStat, setSavedStat] = useLocalStorageState('statistic');
+
+  // useEffect(() => {
+  //   setSavedStat(setSavedStat);
+  // }, []);
+
+  console.log(savedStat);
 
   useEffect(() => {
     if (
@@ -21,6 +29,7 @@ export default function App() {
     ) {
       const stat = getAttemptStat(verbs, wrongAnswers, startTime, finishTime);
       setAttemptStat(stat);
+      setSavedStat(attemptStat);
     }
   }, [submitted, wrongAnswers]);
 
@@ -46,10 +55,11 @@ export default function App() {
   return (
     <>
       <AppBar />
-      <div style={{ display: 'flex' }}>
+      <div className="flex">
         <form
           onKeyDown={getStartTime}
-          style={{ margin: '0 auto' }}
+          className="justify-center"
+          // style={{ margin: '0 auto' }}
           spellCheck={false}
         >
           <VerbsBoard
