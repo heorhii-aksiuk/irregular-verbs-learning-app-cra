@@ -53,13 +53,12 @@ export default function App() {
   console.log(attemptStat);
 
   return (
-    <>
+    <main className="bg-gray-700 bg-app-bg-image bg-contain bg-fixed">
       <AppBar />
-      <div className="flex">
+      <div className="pt-16 max-w-3xl mx-auto w-fit">
         <form
           onKeyDown={getStartTime}
-          className="justify-center"
-          // style={{ margin: '0 auto' }}
+          className="justify-center w-fit"
           spellCheck={false}
         >
           <VerbsBoard
@@ -73,6 +72,6 @@ export default function App() {
           {attemptStat && <AttemptStat statistic={attemptStat} />}
         </form>
       </div>
-    </>
+    </main>
   );
 }
