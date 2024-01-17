@@ -10,7 +10,7 @@ interface Props {
 export default function VerbsBoard(props: Props) {
   const { verbs, submitted, getWrongAnswers } = props;
   return (
-    <ol>
+    <ol className="list-decimal marker:text-white marker:font-semibold">
       {verbs.map((verb) => (
         <VerbItem
           key={verb.id}

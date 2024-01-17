@@ -30,6 +30,9 @@ export default function WordInput(props: Props) {
 
   return (
     <input
+      className={`${
+        value === '' ? 'bg-gray-300/80' : 'bg-gray-400/95'
+      } w-48 rounded font-semibold pl-2 focus:outline-none focus:ring-2 focus:ring-black/90 focus:bg-white/95`}
       onChange={(e) => setValue(e.target.value)}
       value={value}
       style={style}

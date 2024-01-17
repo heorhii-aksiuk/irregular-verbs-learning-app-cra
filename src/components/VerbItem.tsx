@@ -10,7 +10,7 @@ interface Props {
 
 export default function VerbItem({ verb, submitted, getWrongAnswers }: Props) {
   return (
-    <li>
+    <li className="space-x-1 space-y-1">
       <WordTranslation value={verb.translation} />
       <WordInput
         verbId={verb.id}

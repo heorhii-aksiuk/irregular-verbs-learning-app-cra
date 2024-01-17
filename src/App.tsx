@@ -55,7 +55,7 @@ export default function App() {
   return (
     <main className="bg-gray-700 bg-app-bg-image bg-contain bg-fixed">
       <AppBar />
-      <div className="pt-16 max-w-3xl mx-auto w-fit">
+      <div className="pt-14 max-w-3xl mx-auto w-fit">
         <form
           onKeyDown={getStartTime}
           className="justify-center w-fit"
@@ -66,7 +66,11 @@ export default function App() {
             getWrongAnswers={getWrongAnswers}
             submitted={submitted}
           />
-          <button onClick={onSubmit} type="button">
+          <button
+            className="bg-sky-600 px-5 py-1 my-4 rounded font-semibold hover:bg-sky-700"
+            onClick={onSubmit}
+            type="button"
+          >
             Check
           </button>
           {attemptStat && <AttemptStat statistic={attemptStat} />}
