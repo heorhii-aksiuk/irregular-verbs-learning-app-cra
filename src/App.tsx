@@ -5,6 +5,10 @@ import AppBar from './components/AppBar';
 import VerbsBoard from './components/VerbsBoard';
 import AttemptStat from './components/AttemptStat';
 import { useLocalStorageState } from './utils/hooks';
+import AppContainer from './components/AppContainer';
+import Section from './components/Section';
+import Button from './components/Button';
+import VerbsForm from './components/VerbsForm';
 
 export default function App() {
   const [submitted, setSubmitted] = useState(false);
@@ -13,10 +17,6 @@ export default function App() {
   const [attemptStat, setAttemptStat] = useState<Stat | null>(null);
   const [wrongAnswers, setWrongAnswers] = useState<WrongAnswersList>([]);
   const [savedStat, setSavedStat] = useLocalStorageState('statistic');
-
-  // useEffect(() => {
-  //   setSavedStat(setSavedStat);
-  // }, []);
 
   console.log(savedStat);
 
@@ -53,29 +53,19 @@ export default function App() {
   console.log(attemptStat);
 
   return (
-    <main className="bg-gray-700 bg-app-bg-image bg-contain bg-fixed">
+    <AppContainer>
       <AppBar />
-      <div className="pt-14 max-w-3xl mx-auto w-fit">
-        <form
-          onKeyDown={getStartTime}
-          className="justify-center w-fit"
-          spellCheck={false}
-        >
+      <Section>
+        <VerbsForm onKeyDown={getStartTime} spellCheck={false}>
           <VerbsBoard
             verbs={verbs}
             getWrongAnswers={getWrongAnswers}
             submitted={submitted}
           />
-          <button
-            className="bg-sky-600 px-5 py-1 my-4 rounded font-semibold hover:bg-sky-700"
-            onClick={onSubmit}
-            type="button"
-          >
-            Check
-          </button>
-          {attemptStat && <AttemptStat statistic={attemptStat} />}
-        </form>
-      </div>
-    </main>
+          <Button onClick={onSubmit} type="button" content="Check" />
+        </VerbsForm>
+        {attemptStat && <AttemptStat statistic={attemptStat} />}
+      </Section>
+    </AppContainer>
   );
 }

@@ -12,7 +12,13 @@ interface Props {
 export default function WordInput(props: Props) {
   const { verbId, correctValue, submitted, getWrongAnswers, verbForm } = props;
   const [value, setValue] = useState('');
-  const [style, setStyle] = useState({});
+  const [bgStyle, setBgStyle] = useState('bg-gray-200/80');
+
+  useEffect(() => {
+    if (value !== '' && submitted !== true) {
+      setBgStyle('bg-gray-400/95');
+    }
+  }, [value]);
 
   useEffect(() => {
     if (submitted !== true) {
@@ -20,9 +26,9 @@ export default function WordInput(props: Props) {
     }
 
     if (correctValue === value) {
-      setStyle({ backgroundColor: 'green' });
+      setBgStyle('bg-green-500/90');
     } else {
-      setStyle({ backgroundColor: 'red' });
+      setBgStyle('bg-red-500/90');
       getWrongAnswers({ id: verbId, verbForm, correctValue, value });
       setValue((prev) => `${prev}>${correctValue}`);
     }
@@ -30,12 +36,9 @@ export default function WordInput(props: Props) {
 
   return (
     <input
-      className={`${
-        value === '' ? 'bg-gray-300/80' : 'bg-gray-400/95'
-      } w-48 rounded font-semibold pl-2 focus:outline-none focus:ring-2 focus:ring-black/90 focus:bg-white/95`}
+      className={`${bgStyle} w-48 rounded font-semibold pl-2 focus:outline-none focus:ring-2 focus:ring-black/90 focus:bg-white/95`}
       onChange={(e) => setValue(e.target.value)}
       value={value}
-      style={style}
     />
   );
 }

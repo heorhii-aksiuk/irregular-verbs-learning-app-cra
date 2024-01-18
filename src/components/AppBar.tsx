@@ -11,7 +11,6 @@ export default function AppBar() {
             <p>Irregular verbs learning app</p>
           </div>
         </div>
-
         <p>v.0.3</p>
       </div>
     </header>
