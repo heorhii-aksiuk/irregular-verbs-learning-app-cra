@@ -9,77 +9,127 @@ export default function AttemptStat({ stat }: Props) {
   console.log(stat);
 
   return (
-    <div className="font-semibold bg-gray-300/40 rounded p-2">
-      <h2 className="text-lg underline">Attempt statistic</h2>
-      <p>Date: {stat.date}</p>
-      <p>Time: {stat.time}</p>
-      <p>Verbs total: {stat.verbsToLearnCount}</p>
-      <p>Verbs wrong answers: {stat.wrongAnswersVerbsCount}</p>
-      <p>Words total: {stat.wordsToLearnCount}</p>
-      <p>Words wrong answers: {stat.wrongAnswersWordsCount}</p>
-      <p>Score by verbs: {stat.verbsScore}/100</p>
-      <p>Score by words: {stat.wordsScore}/100</p>
+    <div className="font-semibold bg-gray-300/40 rounded p-4 w-fill">
+      <div className="bg-gray-400/80 rounded px-4 py-2 w-60 mx-auto flex flex-col justify-between">
+        {/* TODO: Table */}
+        <h2 className="text-lg text-center">Attempt stat</h2>
+        <p>
+          Date: <span className="float-end">{stat.date}</span>
+        </p>
+        <p>
+          Time: <span className="float-end">{stat.time}</span>
+        </p>
+        <p>
+          Verbs total:{' '}
+          <span className="float-end">{stat.verbsToLearnCount}</span>
+        </p>
+        <p>
+          Verbs wrong answers:{' '}
+          <span className="float-end">{stat.wrongAnswersVerbsCount}</span>
+        </p>
+        <p>
+          Words total:{' '}
+          <span className="float-end">{stat.wordsToLearnCount}</span>
+        </p>
+        <p>
+          Words wrong answers:{' '}
+          <span className="float-end">{stat.wrongAnswersWordsCount}</span>
+        </p>
+        <p>
+          Score by verbs:{' '}
+          <span className="float-end">{stat.verbsScore}/100</span>
+        </p>
+        <p>
+          Score by words:{' '}
+          <span className="float-end">{stat.wordsScore}/100</span>
+        </p>
+      </div>
+
       {stat.resultWrongAnswersList.length >= 0 && (
         <>
-          <table className="table-auto border mt-4">
-            <thead className="border">
-              <tr className="border">
-                <th className="border" colSpan={10}>
+          <table className="table-auto border-2 border-gray-300/30 mt-4 bg-gray-400/80 mx-auto">
+            <thead className="border-2 border-gray-300/30">
+              <tr className="border-2 border-gray-300/30">
+                <th className="border-2 border-gray-300/30" colSpan={10}>
                   Verbs mistakes
                 </th>
               </tr>
             </thead>
-            <thead className="border">
-              <tr className="border">
-                <th className="border" colSpan={2}></th>
-                <th className="border" colSpan={2}>
+            <thead className="border-2 border-gray-300/30">
+              <tr className="border-2 border-gray-300/30">
+                <th className="border-2 border-gray-300/30" colSpan={2}></th>
+                <th className="border-2 border-gray-300/30" colSpan={2}>
                   &#8544;
                 </th>
-                <th className="border" colSpan={2}>
+                <th className="border-2 border-gray-300/30" colSpan={2}>
                   &#8545;
                 </th>
-                <th className="border" colSpan={2}>
+                <th className="border-2 border-gray-300/30" colSpan={2}>
                   &#8546;
                 </th>
-                <th className="border" colSpan={2}>
+                <th className="border-2 border-gray-300/30" colSpan={2}>
                   Info
                 </th>
               </tr>
             </thead>
-            <tbody className="border">
-              <tr className="border">
-                <td className="border text-center">ID</td>
-                <td className="border min-w-16 text-center">Translation</td>
-                <td className="border min-w-16 text-center">❌</td>
-                <td className="border min-w-16 text-center">✅</td>
-                <td className="border min-w-16 text-center">❌</td>
-                <td className="border min-w-16 text-center">✅</td>
-                <td className="border min-w-16 text-center">❌</td>
-                <td className="border min-w-16 text-center">✅</td>
-                <td className="border min-w-10 text-center">Part</td>
-                <td className="border min-w-10 text-center">Total</td>
+            <tbody className="border-2 border-gray-300/30">
+              <tr className="border-2 border-gray-300/30">
+                <td className="border-2 border-gray-300/30 text-center">ID</td>
+                <td className="border-2 border-gray-300/30 min-w-16 text-center">
+                  Translation
+                </td>
+                <td className="border-2 border-gray-300/30 min-w-16 text-center">
+                  ❌
+                </td>
+                <td className="border-2 border-gray-300/30 min-w-16 text-center">
+                  ✅
+                </td>
+                <td className="border-2 border-gray-300/30 min-w-16 text-center">
+                  ❌
+                </td>
+                <td className="border-2 border-gray-300/30 min-w-16 text-center">
+                  ✅
+                </td>
+                <td className="border-2 border-gray-300/30 min-w-16 text-center">
+                  ❌
+                </td>
+                <td className="border-2 border-gray-300/30 min-w-16 text-center">
+                  ✅
+                </td>
+                <td className="border-2 border-gray-300/30 min-w-10 text-center">
+                  Part
+                </td>
+                <td className="border-2 border-gray-300/30 min-w-10 text-center">
+                  Total
+                </td>
               </tr>
               {stat.resultWrongAnswersList.map((item) => {
                 return (
-                  <tr className="border">
-                    <td className="border">{item.id}</td>
-                    <td className="border whitespace-nowrap">
+                  <tr className="border-2 border-gray-300/30">
+                    <td className="border-2 border-gray-300/30">{item.id}</td>
+                    <td className="border-2 border-gray-300/30 whitespace-nowrap">
                       {item.translation}
                     </td>
-                    <td className="border line-through whitespace-nowrap max-w-24 overflow-hidden text-ellipsis">
+                    <td className="border-2 border-gray-300/30 line-through whitespace-nowrap max-w-24 overflow-hidden text-ellipsis">
                       {item.infinitiveWrong}
                     </td>
-                    <td className="border">{item.infinitive}</td>
-                    <td className="border line-through whitespace-nowrap max-w-24 overflow-hidden text-ellipsis">
+                    <td className="border-2 border-gray-300/30">
+                      {item.infinitive}
+                    </td>
+                    <td className="border-2 border-gray-300/30 line-through whitespace-nowrap max-w-24 overflow-hidden text-ellipsis">
                       {item.pastSimpleWrong}
                     </td>
-                    <td className="border">{item.pastSimple}</td>
-                    <td className="border line-through whitespace-nowrap max-w-24 overflow-hidden text-ellipsis">
+                    <td className="border-2 border-gray-300/30">
+                      {item.pastSimple}
+                    </td>
+                    <td className="border-2 border-gray-300/30 line-through whitespace-nowrap max-w-24 overflow-hidden text-ellipsis">
                       {item.pastParticleWrong}
                     </td>
-                    <td className="border ">{item.pastParticle}</td>
-                    <td className="border">{'...'}</td>
-                    <td className="border">{'...'}</td>
+                    <td className="border-2 border-gray-300/30 ">
+                      {item.pastParticle}
+                    </td>
+                    <td className="border-2 border-gray-300/30">{'...'}</td>
+                    <td className="border-2 border-gray-300/30">{'...'}</td>
                   </tr>
                 );
               })}

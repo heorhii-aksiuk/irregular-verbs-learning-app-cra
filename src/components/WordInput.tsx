@@ -16,7 +16,7 @@ export default function WordInput(props: Props) {
 
   useEffect(() => {
     if (value !== '' && submitted !== true) {
-      setBgStyle('bg-gray-400/95');
+      setBgStyle('bg-gray-400/80');
     }
   }, [value]);
 
@@ -26,9 +26,9 @@ export default function WordInput(props: Props) {
     }
 
     if (correctValue === value) {
-      setBgStyle('bg-green-500/90');
+      setBgStyle('bg-green-500/80');
     } else {
-      setBgStyle('bg-red-500/90');
+      setBgStyle('bg-red-500/80');
       getWrongAnswers({ id: verbId, verbForm, correctValue, value });
       setValue((prev) => `${prev}👉${correctValue}`);
     }

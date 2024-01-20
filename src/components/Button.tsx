@@ -9,7 +9,7 @@ interface Props {
 export default function Button({ onClick, type, content }: Props) {
   return (
     <button
-      className="bg-sky-600 px-5 py-1 my-4 rounded font-semibold hover:bg-sky-700"
+      className="bg-sky-600 px-5 py-1 mt-4 rounded font-semibold hover:bg-sky-700"
       onClick={onClick}
       type={type}
     >
