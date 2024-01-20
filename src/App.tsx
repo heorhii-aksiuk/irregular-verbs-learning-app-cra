@@ -50,8 +50,6 @@ export default function App() {
     setSubmitted(true);
   };
 
-  console.log(attemptStat);
-
   return (
     <AppContainer>
       <AppBar />
@@ -64,7 +62,7 @@ export default function App() {
           />
           <Button onClick={onSubmit} type="button" content="Check" />
         </VerbsForm>
-        {attemptStat && <AttemptStat statistic={attemptStat} />}
+        {attemptStat && <AttemptStat stat={attemptStat} />}
       </Section>
     </AppContainer>
   );
