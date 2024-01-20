@@ -30,7 +30,7 @@ export default function WordInput(props: Props) {
     } else {
       setBgStyle('bg-red-500/90');
       getWrongAnswers({ id: verbId, verbForm, correctValue, value });
-      setValue((prev) => `${prev}>${correctValue}`);
+      setValue((prev) => `${prev}👉${correctValue}`);
     }
   }, [submitted]);
 

@@ -9,7 +9,7 @@ export default function AttemptStat({ stat }: Props) {
   console.log(stat);
 
   return (
-    <div className="font-semibold bg-gray-400/95 rounded p-2">
+    <div className="font-semibold bg-gray-300/40 rounded p-2">
       <h2 className="text-lg underline">Attempt statistic</h2>
       <p>Date: {stat.date}</p>
       <p>Time: {stat.time}</p>
@@ -21,23 +21,7 @@ export default function AttemptStat({ stat }: Props) {
       <p>Score by words: {stat.wordsScore}/100</p>
       {stat.resultWrongAnswersList.length >= 0 && (
         <>
-          {/* <ul>
-            {stat.resultWrongAnswersList.map((item) => {
-              return (
-                <li key={item.id}>
-                  <p>{item.id}</p>
-                  <p>{item.translation}</p>
-                  <p>{item.infinitiveWrong}</p>
-                  <p>{item.infinitive}</p>
-                  <p>{item.pastSimpleWrong}</p>
-                  <p>{item.pastSimple}</p>
-                  <p>{item.pastParticleWrong}</p>
-                  <p>{item.pastParticle}</p>
-                </li>
-              );
-            })}
-          </ul> */}
-          <table className="table-auto border">
+          <table className="table-auto border mt-4">
             <thead className="border">
               <tr className="border">
                 <th className="border" colSpan={10}>
@@ -47,9 +31,7 @@ export default function AttemptStat({ stat }: Props) {
             </thead>
             <thead className="border">
               <tr className="border">
-                <th className="border" colSpan={2}>
-                  /
-                </th>
+                <th className="border" colSpan={2}></th>
                 <th className="border" colSpan={2}>
                   &#8544;
                 </th>
@@ -66,31 +48,33 @@ export default function AttemptStat({ stat }: Props) {
             </thead>
             <tbody className="border">
               <tr className="border">
-                <td className="border">Id</td>
-                <td className="border">Translation</td>
-                <td className="border">infinitiveWrong</td>
-                <td className="border">infinitive</td>
-                <td className="border">pastSimpleWrong</td>
-                <td className="border">pastSimple</td>
-                <td className="border">pastParticleWrong</td>
-                <td className="border">pastParticle</td>
-                <td className="border">Part</td>
-                <td className="border">Total verb mistake</td>
+                <td className="border text-center">ID</td>
+                <td className="border min-w-16 text-center">Translation</td>
+                <td className="border min-w-16 text-center">❌</td>
+                <td className="border min-w-16 text-center">✅</td>
+                <td className="border min-w-16 text-center">❌</td>
+                <td className="border min-w-16 text-center">✅</td>
+                <td className="border min-w-16 text-center">❌</td>
+                <td className="border min-w-16 text-center">✅</td>
+                <td className="border min-w-10 text-center">Part</td>
+                <td className="border min-w-10 text-center">Total</td>
               </tr>
               {stat.resultWrongAnswersList.map((item) => {
                 return (
                   <tr className="border">
                     <td className="border">{item.id}</td>
-                    <td className="border">{item.translation}</td>
-                    <td className="border line-through">
+                    <td className="border whitespace-nowrap">
+                      {item.translation}
+                    </td>
+                    <td className="border line-through whitespace-nowrap max-w-24 overflow-hidden text-ellipsis">
                       {item.infinitiveWrong}
                     </td>
                     <td className="border">{item.infinitive}</td>
-                    <td className="border line-through">
+                    <td className="border line-through whitespace-nowrap max-w-24 overflow-hidden text-ellipsis">
                       {item.pastSimpleWrong}
                     </td>
                     <td className="border">{item.pastSimple}</td>
-                    <td className="borderline-through">
+                    <td className="border line-through whitespace-nowrap max-w-24 overflow-hidden text-ellipsis">
                       {item.pastParticleWrong}
                     </td>
                     <td className="border ">{item.pastParticle}</td>
