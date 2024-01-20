@@ -82,12 +82,18 @@ export default function AttemptStat({ stat }: Props) {
                   <tr className="border">
                     <td className="border">{item.id}</td>
                     <td className="border">{item.translation}</td>
-                    <td className="border">{item.infinitiveWrong}</td>
+                    <td className="border line-through">
+                      {item.infinitiveWrong}
+                    </td>
                     <td className="border">{item.infinitive}</td>
-                    <td className="border">{item.pastSimpleWrong}</td>
+                    <td className="border line-through">
+                      {item.pastSimpleWrong}
+                    </td>
                     <td className="border">{item.pastSimple}</td>
-                    <td className="border">{item.pastParticleWrong}</td>
-                    <td className="border">{item.pastParticle}</td>
+                    <td className="borderline-through">
+                      {item.pastParticleWrong}
+                    </td>
+                    <td className="border ">{item.pastParticle}</td>
                     <td className="border">{'...'}</td>
                     <td className="border">{'...'}</td>
                   </tr>
