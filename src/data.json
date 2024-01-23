@@ -542,7 +542,7 @@
     "id": 78,
     "translation": "бути",
     "infinitive": "be",
-    "pastSimple": "were",
+    "pastSimple": "was/were",
     "pastParticle": "been"
   },
   {
@@ -586,5 +586,12 @@
     "infinitive": "win",
     "pastSimple": "won",
     "pastParticle": "won"
+  },
+  {
+    "id": 85,
+    "translation": "вдарити",
+    "infinitive": "strike",
+    "pastSimple": "struck",
+    "pastParticle": "struck"
   }
 ]
