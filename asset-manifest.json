@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/irregular-verbs-learning-app-cra/static/css/main.ac35ccb1.css",
-    "main.js": "/irregular-verbs-learning-app-cra/static/js/main.ba351ca9.js",
+    "main.js": "/irregular-verbs-learning-app-cra/static/js/main.766ab883.js",
     "static/js/787.e68a7e68.chunk.js": "/irregular-verbs-learning-app-cra/static/js/787.e68a7e68.chunk.js",
     "static/media/bg.jpg": "/irregular-verbs-learning-app-cra/static/media/bg.56c9607fb5ddab6d4718.jpg",
     "static/media/logo.png": "/irregular-verbs-learning-app-cra/static/media/logo.568c7681b2dbd576cd4a.png",
     "index.html": "/irregular-verbs-learning-app-cra/index.html",
     "main.ac35ccb1.css.map": "/irregular-verbs-learning-app-cra/static/css/main.ac35ccb1.css.map",
-    "main.ba351ca9.js.map": "/irregular-verbs-learning-app-cra/static/js/main.ba351ca9.js.map",
+    "main.766ab883.js.map": "/irregular-verbs-learning-app-cra/static/js/main.766ab883.js.map",
     "787.e68a7e68.chunk.js.map": "/irregular-verbs-learning-app-cra/static/js/787.e68a7e68.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ac35ccb1.css",
-    "static/js/main.ba351ca9.js"
+    "static/js/main.766ab883.js"
   ]
 }
