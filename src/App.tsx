@@ -9,6 +9,7 @@ import AppContainer from './components/AppContainer';
 import Section from './components/Section';
 import Button from './components/Button';
 import VerbsForm from './components/VerbsForm';
+import Footer from './components/Footer';
 
 export default function App() {
   const [submitted, setSubmitted] = useState(false);
@@ -64,6 +65,7 @@ export default function App() {
         </VerbsForm>
         {attemptStat && <AttemptStat stat={attemptStat} />}
       </Section>
+      <Footer />
     </AppContainer>
   );
 }

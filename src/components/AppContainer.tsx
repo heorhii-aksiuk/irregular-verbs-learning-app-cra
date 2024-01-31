@@ -6,7 +6,7 @@ interface Props {
 
 export default function AppContainer({ children }: Props) {
   return (
-    <main className="bg-gray-700 bg-app-bg-image bg-contain bg-fixed">
+    <main className="bg-gray-700 bg-app-bg-image bg-cover bg-fixed">
       {children}
     </main>
   );
