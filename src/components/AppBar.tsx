@@ -7,10 +7,10 @@ export default function AppBar() {
         <div className="flex">
           <img className="mr-3 mt-1 h-10 w-10" src={logo}></img>
           <div>
-            <p className="font-mono text-l font-semibold text-slate-300/85">
+            <p className="font-poppins text-3xl text-slate-300/85 leading-7">
               Aytivets
             </p>
-            <p className="font-mono text-slate-300/85">
+            <p className="font-mono text-sm text-slate-300/85 leading-none">
               Irregular verbs learning app
             </p>
             {/* TODO: timer */}
