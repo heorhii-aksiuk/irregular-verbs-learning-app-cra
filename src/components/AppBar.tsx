@@ -13,6 +13,7 @@ export default function AppBar() {
             <p className="font-mono text-slate-300/85">
               Irregular verbs learning app
             </p>
+            {/* TODO: timer */}
           </div>
         </div>
         <p className="font-mono text-slate-300/85">v.0.3</p>

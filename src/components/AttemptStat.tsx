@@ -6,8 +6,6 @@ interface Props {
 }
 
 export default function AttemptStat({ stat }: Props) {
-  console.log(stat);
-
   return (
     <div className="font-semibold bg-gray-300/40 rounded p-4 w-fill">
       <div className="bg-gray-400/80 rounded px-4 py-2 w-60 mx-auto flex flex-col justify-between">
@@ -105,7 +103,7 @@ export default function AttemptStat({ stat }: Props) {
               </tr>
               {stat.resultWrongAnswersList.map((item) => {
                 return (
-                  <tr className="border-2 border-gray-300/30">
+                  <tr key={item.id} className="border-2 border-gray-300/30">
                     <td className="border-2 border-gray-300/30">{item.id}</td>
                     <td className="border-2 border-gray-300/30 whitespace-nowrap">
                       {item.translation}
