@@ -7,7 +7,7 @@ interface Props {
 
 export default function AttemptStat({ stat }: Props) {
   return (
-    <div className="font-semibold bg-gray-300/40 rounded p-4 w-fill">
+    <div className="font-semibold bg-gray-300/40 rounded p-4 w-fill mb-2">
       <div className="bg-gray-400/80 rounded px-4 py-2 w-60 mx-auto flex flex-col justify-between">
         {/* TODO: Table */}
         <h2 className="text-lg text-center">Attempt stat</h2>
