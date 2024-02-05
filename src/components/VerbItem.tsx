@@ -1,6 +1,6 @@
-import { Verb, VerbForm, WrongAnswer } from '../types';
 import WordTranslation from './WordTranslation';
 import WordInput from './WordInput';
+import { Verb, VerbForm, WrongAnswer } from '../types';
 
 interface Props {
   verb: Verb;

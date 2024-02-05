@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
 import { getAttemptStat, shuffledVerbsList as verbs } from './utils';
-import { Stat, WrongAnswer, WrongAnswersList } from './types';
-import AppBar from './components/AppBar';
-import VerbsBoard from './components/VerbsBoard';
-import AttemptStat from './components/AttemptStat';
 import { useLocalStorageState } from './utils/hooks';
+import AppBar from './components/AppBar';
 import AppContainer from './components/AppContainer';
 import Section from './components/Section';
-import Button from './components/Button';
+import VerbsBoard from './components/VerbsBoard';
 import VerbsForm from './components/VerbsForm';
+import Button from './components/Button';
+import AttemptStat from './components/AttemptStat';
 import Footer from './components/Footer';
+import { Stat, WrongAnswer, WrongAnswersList } from './types';
 
 export default function App() {
   const [submitted, setSubmitted] = useState(false);

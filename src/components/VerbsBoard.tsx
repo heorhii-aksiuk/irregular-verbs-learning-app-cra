@@ -1,5 +1,5 @@
-import { VerbsList, WrongAnswer } from '../types';
 import VerbItem from './VerbItem';
+import { VerbsList, WrongAnswer } from '../types';
 
 interface Props {
   verbs: VerbsList;

@@ -1,9 +1,7 @@
-import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
 
 export default function Footer() {
-  /* TODO: footer */
   return (
     <footer className="h-12 bg-gray-800/90  w-full text-zinc-200 border-b border-gray-900 drop-shadow-md flex justify-center items-center">
       <ul className="flex space-x-2">
