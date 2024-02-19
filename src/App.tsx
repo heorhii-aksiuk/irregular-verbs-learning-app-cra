@@ -65,6 +65,11 @@ export default function App() {
         </VerbsForm>
         {attemptStat && <AttemptStat stat={attemptStat} />}
       </Section>
+      <iframe
+        src="http://192.168.1.76:81/stream"
+        width={640}
+        height={480}
+      ></iframe>
       <Footer />
     </AppContainer>
   );
