@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getAttemptStat, shuffledVerbsList as verbs } from './utils';
+import { getAttemptStat, getTime, shuffledVerbsList as verbs } from './utils';
 import { useLocalStorageState } from './utils/hooks';
 import AppBar from './components/AppBar';
 import AppContainer from './components/AppContainer';
@@ -18,8 +18,22 @@ export default function App() {
   const [attemptStat, setAttemptStat] = useState<Stat | null>(null);
   const [wrongAnswers, setWrongAnswers] = useState<WrongAnswersList>([]);
   const [savedStat, setSavedStat] = useLocalStorageState('statistic');
+  const [timer, setTimer] = useState<string | null>(null);
 
-  console.log(savedStat);
+  console.log(timer);
+
+  useEffect(() => {
+    if (startTime === null) {
+      return;
+    }
+    const timeoutId = setTimeout(() => {
+      setTimer(getTime(startTime, Date.now()));
+    }, 1000);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [startTime, timer]);
 
   useEffect(() => {
     if (
@@ -53,7 +67,7 @@ export default function App() {
 
   return (
     <AppContainer>
-      <AppBar />
+      <AppBar timer={timer} />
       <Section>
         <VerbsForm onKeyDown={getStartTime} spellCheck={false}>
           <VerbsBoard
