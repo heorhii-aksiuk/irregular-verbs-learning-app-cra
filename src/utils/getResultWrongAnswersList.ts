@@ -4,7 +4,7 @@ export function getResultWrongAnswersList(
   words: VerbsList,
   wrongAnswersList: WrongAnswersList,
 ) {
-  const result: any = [];
+  const result: any[] = [];
 
   wrongAnswersList.forEach((wrongAnswer) => {
     const wrongAnswerId = wrongAnswer.id;
